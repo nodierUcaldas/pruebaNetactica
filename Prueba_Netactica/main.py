@@ -24,11 +24,15 @@ time.sleep(1)
 
 driver.get('https://www.viajesexito.com/')
 
-
+#seleccion de la opcion hoteles
 WebDriverWait(driver, 5)
 content = driver.find_element_by_css_selector('span.icon-hotel hoteles'.replace(' ','.'))
 content.click()
 
+#llenado campos busqueda hotel
+WebDriverWait(driver, 5)\
+   .until(EC.element_to_be_clickable((By.CSS_SELECTOR, 'input#CityPredictive_netactica_hotel')))\
+    .send_keys('Miami')
 
 '''
 if __name__ == '__main__':
