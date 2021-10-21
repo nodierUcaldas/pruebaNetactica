@@ -3,8 +3,6 @@ from selenium.webdriver import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
-import time
-#import pandas as pd
 
 #opciones de navegacion
 options = webdriver.ChromeOptions()
@@ -15,13 +13,6 @@ driver_path = 'C:\\Users\\nodierjose\\Documents\\GitHub\\pruebaNetactica\\chrome
 
 driver = webdriver.Chrome(driver_path, chrome_options=options)
 
-
-#acomodar a la pantalla
-'''
-driver.set_window_position(2000,0)
-driver.maximize_window()
-time.sleep(1)
-'''
 
 driver.get('https://www.viajesexito.com/')
 
@@ -143,11 +134,5 @@ WebDriverWait(driver, 5)\
 WebDriverWait(driver, 5)\
    .until(EC.element_to_be_clickable((By.CSS_SELECTOR, 'input#ContactPhone')))\
     .send_keys('3108664411')
-
-'''
-if __name__ == '__main__':
-    S=Source("http/",["info1","info2","info3"],[])
-    print(S.build_urls(S.domain,S.articles))
-'''
 
 
